@@ -1,1 +1,1 @@
-# a starting point to explore new ideas
+# a starting point for new ideas
