@@ -8,9 +8,10 @@ body {
 }
 
 ._viewport {
-  aspect-ratio: 1/2;
-  width: 400px;
-  max-height: 80vh;
+  width: 800px;
+  height: 600px;
+  max-width: 90vw;
+  max-height: 90vw;
   background: white;
   border-radius: 20px;
   overflow: hidden;
@@ -21,4 +22,10 @@ body {
     0px 12.5216px 10.0172px rgba(0, 0, 0, 0.03),
     0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0242336),
     0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0168687);
+}
+
+._viewport.mobile {
+  aspect-ratio: 1/2;
+  max-height: 80vh;
+  width: auto;
 }
