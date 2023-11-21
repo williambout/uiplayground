@@ -14,5 +14,15 @@
     <div id="viewport" class="_viewport">
       <div class="stagger-visualizer"></div>
     </div>
+    <script type="module">
+      if ("paintWorklet" in CSS) {
+        CSS.paintWorklet.addModule(
+          new URL(
+            "https://www.unpkg.com/css-houdini-squircle/squircle.min.js",
+            import.meta.url
+          )
+        );
+      }
+    </script>
   </body>
 </html>
