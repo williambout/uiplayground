@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "dev": "parcel index.html"
+  },
+  "dependencies": {
+    "@juliangarnierorg/anime-beta": "^4.0.0-beta.89",
+    "@tweakpane/plugin-essentials": "^0.2.0",
+    "tweakpane": "^4.0.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.10.3"
+  }
+}
