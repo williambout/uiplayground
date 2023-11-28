@@ -30,10 +30,35 @@ body {
   width: auto;
 }
 
+footer {
+  position: absolute;
+  bottom: 32px;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 11px;
+  font-family: "Roboto Mono";
+  font-weight: 500;
+}
+
 @supports (mask-image: paint(smooth-corners)) {
   ._viewport {
     --squircle-smooth: 0.36;
     --squircle-radius: 20px;
     mask-image: paint(squircle);
   }
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/roboto-mono-v23-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 500;
+  src: url("fonts/roboto-mono-v23-latin-500.woff2") format("woff2");
 }

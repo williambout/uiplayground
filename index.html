@@ -9,10 +9,51 @@
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="internal/base.js"></script>
     <script type="module" src="main.js"></script>
+    <!-- HTML in your document's head -->
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
   </head>
   <body>
     <div id="viewport" class="_viewport">
-      <div class="stagger-visualizer"></div>
+      <div class="bubbles">
+        <div class="bubble">
+          <span>Where is Christophe?</span>
+          <div class="border depth1"></div>
+          <div class="border depth2"></div>
+          <div class="background depth1"></div>
+          <div class="background depth2"></div>
+          <div class="shadow depth1"></div>
+          <div class="shadow depth2"></div>
+        </div>
+        <div class="bubble">
+          <span>レモンと砂糖のクレープ</span>
+          <div class="border depth1"></div>
+          <div class="border depth2"></div>
+          <div class="background depth1"></div>
+          <div class="background depth2"></div>
+          <div class="shadow depth1"></div>
+          <div class="shadow depth2"></div>
+        </div>
+        <div class="bubble">
+          <span>ขอบฟ้าที่กำลังโผล่ออกมา</span>
+          <div class="border depth1"></div>
+          <div class="border depth2"></div>
+          <div class="background depth1"></div>
+          <div class="background depth2"></div>
+          <div class="shadow depth1"></div>
+          <div class="shadow depth2"></div>
+        </div>
+        <div class="bubble">
+          <span>Divertente svolta degli eventi</span>
+          <div class="border depth1"></div>
+          <div class="border depth2"></div>
+          <div class="background depth1"></div>
+          <div class="background depth2"></div>
+          <div class="shadow depth1"></div>
+          <div class="shadow depth2"></div>
+        </div>
+      </div>
+      <input class="depthRange" type="range" />
     </div>
     <script type="module">
       if ("paintWorklet" in CSS) {
@@ -24,5 +65,6 @@
         );
       }
     </script>
+    <footer><span>UIPlayground 1.0</span></footer>
   </body>
 </html>
