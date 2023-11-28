@@ -118,3 +118,20 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.03), 0px 4px 9px rgba(0, 0, 0, 0.08),
     inset 0px 2px 4px rgba(255, 255, 255, 0.35);
 }
+
+.bubble .label {
+  position: relative;
+}
+
+.bubble .label .span {
+  position: relative;
+  z-index: 10;
+}
+
+.bubble .label .embossed {
+  position: absolute;
+  inset: 0;
+  color: white;
+  z-index: 5;
+  transform: translateY(1px);
+}

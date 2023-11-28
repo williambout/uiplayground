@@ -21,6 +21,10 @@ var bg_depth2 = animate(".background.depth2", {
   opacity: [-3, 1],
 });
 
+var embossed_depth2 = animate(".embossed.depth2", {
+  opacity: [-3, 1],
+});
+
 const depthRangeEl = document.querySelector(".depthRange");
 depthRangeEl.oninput = () => {
   border_depth1.seek(bg_depth1.duration * (depthRangeEl.value / 100));
@@ -29,4 +33,5 @@ depthRangeEl.oninput = () => {
   bg_depth2.seek(bg_depth1.duration * (depthRangeEl.value / 100));
   shadow_depth1.seek(bg_depth1.duration * (depthRangeEl.value / 100));
   shadow_depth2.seek(bg_depth1.duration * (depthRangeEl.value / 100));
+  embossed_depth2.seek(bg_depth1.duration * (depthRangeEl.value / 100));
 };
