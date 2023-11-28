@@ -2,10 +2,10 @@
   "source": "index.html",
   "scripts": {
     "start": "parcel",
-    "build": "npm config set '//registry.npmjs.org/:_authToken' ${process.env.GITHUB_ACCESS_TOKEN} && npm config set '@juliangarnierorg:registry=https://npm.pkg.github.com' && parcel build"
+    "build": "parcel build"
   },
   "dependencies": {
-    "@juliangarnierorg/anime-beta": "^4.0.0-beta.89",
+    "@juliangarnierorg/anime-beta": "git+https://williambout:${process.env.GITHUB_ACCESS_TOKEN}@github.comjuliangarnierorg/anime-beta.git",
     "@tweakpane/plugin-essentials": "^0.2.0",
     "tweakpane": "^4.0.1"
   },
