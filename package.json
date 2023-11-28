@@ -2,7 +2,7 @@
   "source": "index.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build"
+    "build": "npm config set '//registry.npmjs.org/:_authToken' ${process.env.GITHUB_ACCESS_TOKEN} && npm config set '@juliangarnierorg:registry=https://npm.pkg.github.com' && parcel build"
   },
   "dependencies": {
     "@juliangarnierorg/anime-beta": "^4.0.0-beta.89",
