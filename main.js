@@ -1,6 +1,22 @@
 import { animate } from "@juliangarnierorg/anime-beta";
 import { pane } from "./internal/base.js";
 
+/*
+
+		__                 __   __   __             __  
+|  | | |__) |     /\  \ / / _` |__) /  \ |  | |\ | |  \ 
+\__/ | |    |___ /~~\  |  \__> |  \ \__/ \__/ | \| |__/ 
+														
+             
+*/
+// Made by William Bout • @williambout
+
+// Tweakpane
+// https://cocopon.github.io/tweakpane/
+
+// Anime
+// https://animejs.com/
+
 var border_depth1 = animate(".border.depth1", {
   opacity: [0, 1],
   autoplay: false,
