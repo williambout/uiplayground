@@ -1,13 +1,15 @@
-import { animate } from "@juliangarnierorg/anime-beta";
+import anime from "animejs/lib/anime.es.js";
 import { pane } from "./internal/base.js";
 
 /*
-
-		__                 __   __   __             __  
-|  | | |__) |     /\  \ / / _` |__) /  \ |  | |\ | |  \ 
-\__/ | |    |___ /~~\  |  \__> |  \ \__/ \__/ | \| |__/ 
-														
-             
+ _   _ ___________ _                                             _ 
+| | | |_   _| ___ \ |                                           | |
+| | | | | | | |_/ / | __ _ _   _  __ _ _ __ ___  _   _ _ __   __| |
+| | | | | | |  __/| |/ _` | | | |/ _` | '__/ _ \| | | | '_ \ / _` |
+| |_| |_| |_| |   | | (_| | |_| | (_| | | | (_) | |_| | | | | (_| |
+ \___/ \___/\_|   |_|\__,_|\__, |\__, |_|  \___/ \__,_|_| |_|\__,_|
+                            __/ | __/ |                            
+                           |___/ |___/                             
 */
 // Made by William Bout • @williambout
 
@@ -17,35 +19,45 @@ import { pane } from "./internal/base.js";
 // Anime
 // https://animejs.com/
 
-var border_depth1 = animate(".border.depth1", {
+const border_depth1 = anime({
+  targets: ".border.depth1",
   opacity: [0, 1],
   autoplay: false,
 });
-var border_depth2 = animate(".border.depth2", {
-  opacity: [-3, 1],
-  autoplay: false,
-});
 
-var shadow_depth1 = animate(".shadow.depth1", {
+const border_depth2 = anime({
+  targets: ".border.depth2",
   opacity: [0, 1],
   autoplay: false,
 });
-var shadow_depth2 = animate(".shadow.depth2", {
-  opacity: [-3, 1],
-  autoplay: false,
-});
 
-var bg_depth1 = animate(".background.depth1", {
+const shadow_depth1 = anime({
+  targets: ".shadow.depth1",
   opacity: [0, 1],
   autoplay: false,
 });
-var bg_depth2 = animate(".background.depth2", {
-  opacity: [-3, 1],
+
+const shadow_depth2 = anime({
+  targets: ".shadow.depth2",
+  opacity: [0, 1],
   autoplay: false,
 });
 
-var embossed_depth2 = animate(".embossed.depth2", {
-  opacity: [-3, 1],
+const bg_depth1 = anime({
+  targets: ".background.depth1",
+  opacity: [0, 1],
+  autoplay: false,
+});
+
+const bg_depth2 = anime({
+  targets: ".background.depth2",
+  opacity: [0, 1],
+  autoplay: false,
+});
+
+const embossed_depth2 = anime({
+  targets: ".embossed.depth2",
+  opacity: [0, 1],
   autoplay: false,
 });
 
@@ -58,11 +70,11 @@ pane
     value: 0,
   })
   .on("change", (event) => {
-    border_depth1.seek(bg_depth1.duration * event.value);
-    border_depth2.seek(bg_depth1.duration * event.value);
-    bg_depth1.seek(bg_depth1.duration * event.value);
-    bg_depth2.seek(bg_depth1.duration * event.value);
-    shadow_depth1.seek(bg_depth1.duration * event.value);
-    shadow_depth2.seek(bg_depth1.duration * event.value);
-    embossed_depth2.seek(bg_depth1.duration * event.value);
+    border_depth1.seek((bg_depth1.duration * event.value) / 8);
+    border_depth2.seek((bg_depth1.duration * event.value) / 8);
+    bg_depth1.seek((bg_depth1.duration * event.value) / 8);
+    bg_depth2.seek((bg_depth1.duration * event.value) / 8);
+    shadow_depth1.seek((bg_depth1.duration * event.value) / 8);
+    shadow_depth2.seek((bg_depth1.duration * event.value) / 8);
+    embossed_depth2.seek((bg_depth1.duration * event.value) / 8);
   });

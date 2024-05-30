@@ -5,11 +5,11 @@
     "build": "parcel build"
   },
   "dependencies": {
-    "@juliangarnierorg/anime-beta": "^4.0.0-beta.89",
-    "@tweakpane/plugin-essentials": "^0.2.0",
-    "tweakpane": "^4.0.1"
+    "@tweakpane/plugin-essentials": "^0.2.1",
+    "animejs": "^3.2.2",
+    "tweakpane": "^4.0.3"
   },
   "devDependencies": {
-    "parcel": "^2.10.3"
+    "parcel": "^2.12.0"
   }
 }
